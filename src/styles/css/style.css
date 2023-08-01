@@ -1,0 +1,995 @@
+@font-face {
+  font-display: swap;
+  font-family: "comfortaa";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/comfortaa-v40-latin-regular.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "convergence";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/convergence-v15-latin-regular.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Anton";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/anton-v23-latin-regular.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Astloch";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/astloch-v26-latin-regular.woff2") format("woff2");
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "comfortaa";
+  background-image: url("/assets/img/background2.jpg");
+  background-size: cover;
+  color: white;
+}
+
+#header {
+  height: 100%;
+}
+
+body {
+  background-color: azure;
+  height: 100%;
+}
+
+.divider {
+  width: 200px;
+  margin: 0 auto;
+  border: solid #cdcdd2 1px;
+}
+
+#logo {
+  border-radius: 15%;
+  width: 200px;
+  height: 200px;
+  margin: 8px;
+  background-color: #3f4041;
+  transition-duration: 0.5s;
+}
+
+#logo:hover {
+  scale: 1.1;
+  transform: translate(0px, 12px);
+  rotate: 3deg;
+  transition-duration: 0.5s;
+}
+
+#links, #options {
+  padding: 8px 4px;
+}
+#links ul, #options ul {
+  list-style: none;
+}
+#links ul li, #options ul li {
+  border-radius: 12.5px;
+  padding: 2px 6px;
+  margin: 0 20px;
+}
+#links ul li a, #options ul li a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+#links ul li a p, #options ul li a p {
+  padding: 4px;
+  width: 60%;
+}
+#links ul li a i, #options ul li a i {
+  width: 10%;
+}
+#links ul li:hover, #options ul li:hover {
+  background-color: #6af578;
+  padding: 6px;
+  border-radius: 12.5px;
+}
+#links ul li:hover p, #options ul li:hover p {
+  padding: 4px;
+  background-color: #11941e;
+  border-radius: 10px;
+  color: white;
+}
+#links ul li:hover i, #options ul li:hover i {
+  color: #11941e;
+}
+#links ul li, #options ul li {
+  transition-duration: 1s;
+}
+#links ul li:hover, #options ul li:hover {
+  transition-duration: 1s;
+}
+#links ul li p, #options ul li p {
+  transition-duration: 0.5s !important;
+}
+#links ul li:hover p, #options ul li:hover p {
+  transition-duration: 0.5s !important;
+}
+
+#options ul li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#resume {
+  margin: auto;
+  width: 200px;
+}
+#resume div {
+  margin-top: 4px;
+  padding: 4px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  border: solid #8c928c 2px;
+  justify-content: space-between;
+  transition-duration: 1s;
+}
+#resume div:hover {
+  border-color: #6af578;
+  background-color: #11941e;
+  color: white;
+  transition-duration: 1s;
+}
+
+.active {
+  color: white;
+  background-color: #b1b5b9;
+}
+.active i {
+  color: #d5dbe0;
+}
+.active p {
+  border-radius: 10px;
+  margin: 2px;
+  padding: 2px;
+  background-color: #323539;
+}
+
+.selected {
+  background-color: black;
+}
+
+#main {
+  width: 100%;
+  padding: 20px;
+}
+
+.mycontainer {
+  margin-left: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+#intro {
+  max-width: 700px;
+  margin: 0 20px;
+}
+
+#Home-header {
+  font-family: "convergence";
+  font-weight: 1000;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+#Home-header h1 {
+  font-size: 6rem;
+  text-shadow: 4px 4px 4px #8c928c;
+}
+
+#welcom h2 {
+  font-family: "convergence";
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+#downloadCV {
+  width: 100%;
+}
+#downloadCV button {
+  padding: 4px 8px;
+  margin: 14px 0;
+  background-color: #8c928c;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  color: white;
+  transition-duration: 1s;
+}
+#downloadCV button:hover {
+  background-color: #6af578;
+  color: black;
+}
+
+#about {
+  text-align: justify;
+}
+
+#right-intro {
+  border-left: solid #c8cccf 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 auto;
+  width: 100%;
+}
+
+#card1, #card2 {
+  box-shadow: 4px 4px 18px rgba(48, 255, 214, 0.7568627451);
+  width: 250px;
+  height: fit-content;
+  margin: 10px 20px;
+  background-color: #afd104;
+  padding: 40px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#card1 h3, #card2 h3 {
+  font-family: convergence;
+  font-size: 30px;
+  font-weight: 500px;
+}
+#card1 div, #card2 div {
+  display: flex;
+  align-items: baseline;
+}
+#card1 div h4, #card2 div h4 {
+  font-size: 50px;
+}
+#card1 div p, #card2 div p {
+  font-size: 25px;
+}
+
+.total {
+  background-color: #323539;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 15px;
+}
+.total h4 {
+  font-size: 30px !important;
+  margin-left: 8px;
+}
+
+#card2 div {
+  display: flex;
+  flex-direction: column;
+}
+
+#skgrid {
+  gap: 1rem;
+}
+
+#languages {
+  border-top: solid #b1b5b9 1px;
+  padding-top: 40px;
+  margin-top: 40px;
+}
+#languages #frame {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0 20px;
+}
+
+@media (min-width: 1060px) {
+  #welcom {
+    flex-direction: row;
+  }
+}
+@media (max-width: 1060px) {
+  #right-intro {
+    border: none;
+    flex-direction: row;
+  }
+}
+.circle-small {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 20px;
+}
+.circle-small svg {
+  width: 80px;
+  height: 80px;
+}
+.circle-small .bg {
+  fill: none;
+  stroke-width: 1px;
+  stroke: rgba(53, 48, 54, 0.5);
+}
+.circle-small .text {
+  position: absolute;
+  width: 100%;
+  top: 26px;
+  font-size: 17px;
+  text-align: center;
+  font-weight: 400;
+  line-height: 16px;
+}
+.circle-small .progress {
+  fill: none;
+  stroke-width: 6px;
+  stroke: #9a0fe0;
+  stroke-linecap: round;
+  stroke-dasharray: 232.36;
+  stroke-dashoffset: 232.36;
+  animation: one-r 1s ease-in-out, disappear 2s;
+}
+
+.circle-small:hover .progress.one {
+  stroke-dasharray: 232.36;
+  stroke-dashoffset: 80;
+  animation: one 2s ease-in-out, appear 2s;
+}
+
+#skgrid .all {
+  border-radius: 15px;
+  padding: 10px;
+  width: 300px;
+  text-align: justify;
+}
+#skgrid .all .progress {
+  fill: none;
+  stroke-width: 10px;
+  stroke-linecap: round;
+  animation: big-r 1.5s ease-in-out, disappear 1.5s;
+  transition-duration: 1s;
+}
+#skgrid .all .circle-big, #skgrid .all .text {
+  scale: 1.5;
+  transition-duration: 1s;
+}
+#skgrid .all .mastery {
+  display: flex;
+  align-items: center;
+  transition-duration: 5s;
+}
+#skgrid .all .mastery h2 {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+#skgrid .all .mastery li {
+  margin-left: 12px;
+  list-style: circle;
+  font-size: 12px;
+}
+#skgrid .all .framework {
+  animation: apear-framw-r 1s ease-in-out;
+  animation-fill-mode: forwards;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 2px;
+}
+#skgrid .all .framework h3 {
+  border-radius: 15px;
+  padding: 0 5px;
+}
+#skgrid .all .circle-big {
+  position: relative;
+  width: 114px;
+  height: 114px;
+  margin: 30px auto 25px auto;
+}
+#skgrid .all .circle-big svg {
+  width: 114px;
+  height: 114px;
+}
+#skgrid .all .circle-big .bg {
+  fill: none;
+  stroke-width: 1px;
+  stroke-dashoffset: 60;
+}
+#skgrid .all .circle-big .text {
+  position: absolute;
+  width: 100%;
+  top: 37px;
+  font-size: 24px;
+  text-align: center;
+  font-weight: 400;
+  line-height: 22px;
+}
+#skgrid .all .circle-big .text .small {
+  font-size: 14px;
+}
+
+#js-card {
+  background-color: rgba(199, 239, 37, 0.558);
+}
+#js-card .progress {
+  stroke-dasharray: 326.56;
+  stroke-dashoffset: 326.56;
+}
+#js-card .bg, #js-card .progress {
+  stroke: #ffff00;
+}
+#js-card .small {
+  color: rgb(148, 143, 8);
+}
+#js-card .mastery .jsdesc {
+  animation: apear-desc-r 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+#js-card .framework #reactjs {
+  background-color: rgba(80, 201, 231, 0.732);
+}
+#js-card .framework #angular {
+  background-color: rgba(250, 45, 45, 0.7215686275);
+}
+#js-card .framework #nodejs {
+  background-color: rgba(48, 186, 62, 0.6352941176);
+}
+#js-card .circle-big .bg {
+  stroke: rgba(206, 214, 64, 0.5);
+  stroke-dashoffset: 60;
+}
+
+#js-card:hover .jsdesc {
+  display: block;
+  animation: apear-desc 1s ease-in-out;
+}
+#js-card:hover .framework {
+  display: flex;
+  animation-fill-mode: forwards;
+  animation: apear-framw 1s ease-in-out;
+}
+#js-card:hover .circle-big, #js-card:hover .text {
+  scale: 1;
+  transition-duration: 2s;
+}
+#js-card:hover .circle-big .progress {
+  fill: none;
+  stroke-dashoffset: 60;
+  animation: big 1.5s ease-in-out, appear 1.5s;
+}
+
+#css-card {
+  background-color: rgba(37, 81, 239, 0.558);
+}
+#css-card .progress {
+  stroke-dasharray: 346.56;
+  stroke-dashoffset: 346.56;
+}
+#css-card .bg, #css-card .progress {
+  stroke: #0051ff;
+}
+#css-card .small {
+  color: rgb(11, 23, 255);
+}
+#css-card .mastery .jsdesc {
+  animation: apear-desc-r 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+#css-card .framework #reactjs {
+  background-color: rgba(80, 201, 231, 0.732);
+}
+#css-card .framework #angular {
+  background-color: rgba(250, 45, 45, 0.7215686275);
+}
+#css-card .framework #nodejs {
+  background-color: rgba(48, 186, 62, 0.6352941176);
+}
+#css-card .circle-big .bg {
+  stroke: rgba(23, 23, 235, 0.5);
+}
+
+#css-card:hover .jsdesc {
+  display: block;
+  animation: apear-desc 1s ease-in-out;
+}
+#css-card:hover .framework {
+  display: flex;
+  animation-fill-mode: forwards;
+  animation: apear-framw 1s ease-in-out;
+}
+#css-card:hover .circle-big, #css-card:hover .text {
+  scale: 1;
+  transition-duration: 2s;
+}
+#css-card:hover .circle-big .progress {
+  fill: none;
+  stroke-dashoffset: 60;
+  animation: big 1.5s ease-in-out, appear 1.5s;
+}
+
+#html-card {
+  background-color: rgba(207, 113, 20, 0.558);
+}
+#html-card .progress {
+  stroke-dasharray: 366.56;
+  stroke-dashoffset: 366.56;
+}
+#html-card .bg, #html-card .progress {
+  stroke: #ffa200;
+}
+#html-card .small {
+  color: rgb(125, 88, 12);
+}
+#html-card .mastery .jsdesc {
+  animation: apear-desc-r 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+#html-card .framework #basic {
+  background-color: rgba(17, 95, 203, 0.732);
+}
+#html-card .circle-big .bg {
+  stroke: rgba(235, 150, 23, 0.5);
+}
+
+#html-card:hover .jsdesc {
+  display: block;
+  animation: apear-desc 1s ease-in-out;
+}
+#html-card:hover .framework {
+  display: flex;
+  animation-fill-mode: forwards;
+  animation: apear-framw 1s ease-in-out;
+}
+#html-card:hover .circle-big, #html-card:hover .text {
+  scale: 1;
+  transition-duration: 2s;
+}
+#html-card:hover .circle-big .progress {
+  fill: none;
+  stroke-dashoffset: 60;
+  animation: big 1.5s ease-in-out, appear 1.5s;
+}
+
+#python-card {
+  background-color: rgba(61, 47, 251, 0.558);
+}
+#python-card .progress {
+  stroke-dasharray: 300.56;
+  stroke-dashoffset: 300.56;
+}
+#python-card .bg, #python-card .progress {
+  stroke: #000dff;
+}
+#python-card .small {
+  color: rgb(11, 23, 255);
+}
+#python-card .mastery .jsdesc {
+  animation: apear-desc-r 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+#python-card .framework #django {
+  background-color: rgb(7, 196, 23);
+}
+#python-card .framework #odoo {
+  background-color: rgba(238, 85, 192, 0.506);
+}
+#python-card .circle-big .bg {
+  stroke: rgba(8, 8, 248, 0.5);
+}
+
+#python-card:hover .jsdesc {
+  display: block;
+  animation: apear-desc 1s ease-in-out;
+}
+#python-card:hover .framework {
+  display: flex;
+  animation-fill-mode: forwards;
+  animation: apear-framw 1s ease-in-out;
+}
+#python-card:hover .circle-big, #python-card:hover .text {
+  scale: 1;
+  transition-duration: 2s;
+}
+#python-card:hover .circle-big .progress {
+  fill: none;
+  stroke-dashoffset: 60;
+  animation: big 1.5s ease-in-out, appear 1.5s;
+}
+
+#java-card {
+  background-color: rgba(227, 220, 16, 0.723);
+}
+#java-card .progress {
+  stroke-dasharray: 295.56;
+  stroke-dashoffset: 295.56;
+}
+#java-card .bg, #java-card .progress {
+  stroke: #f2ff00;
+}
+#java-card .small {
+  color: rgb(141, 128, 12);
+}
+#java-card .mastery .jsdesc {
+  animation: apear-desc-r 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+#java-card .framework #netbeans {
+  background-color: rgba(4, 142, 201, 0.732);
+}
+#java-card .framework #javafx {
+  background-color: rgba(250, 161, 45, 0.7215686275);
+}
+#java-card .circle-big .bg {
+  stroke: rgba(137, 135, 11, 0.5);
+}
+
+#java-card:hover .jsdesc {
+  display: block;
+  animation: apear-desc 1s ease-in-out;
+}
+#java-card:hover .framework {
+  display: flex;
+  animation-fill-mode: forwards;
+  animation: apear-framw 1s ease-in-out;
+}
+#java-card:hover .circle-big, #java-card:hover .text {
+  scale: 1;
+  transition-duration: 2s;
+}
+#java-card:hover .circle-big .progress {
+  fill: none;
+  stroke-dashoffset: 60;
+  animation: big 1.5s ease-in-out, appear 1.5s;
+}
+
+@keyframes apear-desc {
+  0% {
+    display: block;
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    width: 50%;
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes apear-desc-r {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    width: 50%;
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    width: 0;
+    display: none;
+  }
+}
+@keyframes apear-framw {
+  0% {
+    display: flex;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes apear-framw-r {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.space {
+  border-top: solid #8c928c 2px;
+  margin-top: 40px;
+  padding-top: 40px;
+}
+.space .headline h1 {
+  font-family: convergence;
+  font-size: 3rem;
+  font-weight: 800;
+}
+.space .subheadline h2 {
+  font-family: convergence;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 10px 0px;
+}
+
+.frmwork {
+  border: solid white 2px;
+  border-radius: 20px;
+  padding: 10px;
+  display: flex;
+  min-width: 510px;
+}
+.frmwork h4 {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+}
+.frmwork img {
+  width: 200px;
+  border-radius: 50%;
+}
+.frmwork .body {
+  width: 100%;
+}
+.frmwork .body .atributes {
+  display: flex;
+  flex-direction: column;
+}
+.frmwork .atributes li div {
+  background-color: #949ea7;
+  width: 100%;
+  border-radius: 20px;
+  height: 10px;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  transition-duration: 1s;
+}
+.frmwork .atributes li div div {
+  border-radius: 20px;
+  height: 100%;
+  background-color: #05f11d;
+}
+.frmwork .atributes li div .pr1 {
+  width: 0%;
+}
+.frmwork .atributes li div .pr2 {
+  width: 0%;
+}
+.frmwork .atributes li div .pr3 {
+  width: 0%;
+}
+.frmwork .atributes li div .pr4 {
+  width: 0%;
+}
+.frmwork .atributes ul li {
+  display: flex;
+  align-items: center;
+}
+.frmwork .atributes ul li p {
+  width: 160px;
+}
+.frmwork .atributes .bottom-text h2 {
+  background-color: rgba(0, 200, 255, 0.3137254902);
+  border-radius: 20px;
+  padding: 0 5px;
+}
+.frmwork .atributes .bottom-text span {
+  background-color: rgba(249, 169, 48, 0.8196078431);
+  border-radius: 20px;
+  margin: 0 4px;
+  padding: 0 8px;
+}
+
+.react-fw:hover {
+  background-color: rgba(5, 158, 241, 0.3843137255);
+  border: none;
+  transition-duration: 1s;
+}
+.react-fw:hover .atributes li div {
+  transition-duration: 1s;
+}
+.react-fw:hover .atributes li div .pr1 {
+  width: 70%;
+}
+.react-fw:hover .atributes li div .pr2 {
+  width: 90%;
+}
+.react-fw:hover .atributes li div .pr3 {
+  width: 50%;
+}
+.react-fw:hover .atributes li div .pr4 {
+  width: 90%;
+}
+
+.nodejs-fw:hover {
+  background-color: rgba(73, 252, 50, 0.3843137255);
+  border: none;
+  transition-duration: 1s;
+}
+.nodejs-fw:hover .atributes li div {
+  transition-duration: 1s;
+}
+.nodejs-fw:hover .atributes li div .pr1 {
+  width: 80%;
+}
+.nodejs-fw:hover .atributes li div .pr2 {
+  width: 80%;
+}
+.nodejs-fw:hover .atributes li div .pr3 {
+  width: 70%;
+}
+.nodejs-fw:hover .atributes li div .pr4 {
+  width: 65%;
+}
+
+.laravel-fw:hover {
+  background-color: rgba(255, 45, 21, 0.4666666667);
+  border: none;
+  transition-duration: 1s;
+}
+.laravel-fw:hover .atributes li div {
+  transition-duration: 1s;
+}
+.laravel-fw:hover .atributes li div .pr1 {
+  width: 60%;
+}
+.laravel-fw:hover .atributes li div .pr2 {
+  width: 85%;
+}
+.laravel-fw:hover .atributes li div .pr3 {
+  width: 53%;
+}
+.laravel-fw:hover .atributes li div .pr4 {
+  width: 90%;
+}
+
+.skill-items div {
+  border-radius: 140px 140px 25px 25px;
+  padding: 10px;
+  transition-duration: 0.5s;
+}
+.skill-items div img, .skill-items div i {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  font-size: 80px;
+  text-align: center;
+}
+.skill-items div i {
+  padding: 10px 0;
+}
+.skill-items div h2 {
+  font-family: astloch;
+  font-weight: 900;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 5px;
+  border-radius: 10px;
+}
+
+.skill-items div:hover {
+  background-color: rgba(74, 155, 247, 0.442);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.643);
+  scale: 1.1;
+  transition-duration: 0.5s;
+}
+.skill-items div:hover h2 {
+  background-color: rgba(72, 72, 69, 0.29);
+  text-shadow: 2px 2px 10px #ffffff;
+  animation: poping infinite ease-in-out 1s;
+}
+
+@keyframes poping {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 0.9;
+  }
+  100% {
+    scale: 1;
+  }
+}
+.achive {
+  width: 400px;
+  padding: 5px;
+}
+.achive .achive-ov {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+}
+.achive .achive-desc {
+  padding: 0 4px;
+}
+.achive .achive-desc h1 {
+  font-family: convergence;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.project {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+.project .project-ov {
+  width: 400px;
+  height: 220px;
+  background-color: rgba(5, 158, 241, 0.3843137255);
+  border-radius: 6px;
+}
+.project .project-desc {
+  margin: 0 1rem;
+}
+.project .project-desc h2 {
+  font-family: convergence;
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+.project .project-desc div p {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  font-style: italic;
+  max-width: 400px;
+  text-align: justify;
+}
+.project .project-desc a {
+  padding: 2px 8px;
+  border-radius: 10px;
+  width: fit-content;
+  background-color: rgba(0, 128, 255, 0.3137254902);
+}
+
+form {
+  background-color: rgba(0, 128, 255, 0.3137254902);
+  border-radius: 10px;
+  padding: 20px;
+}
+form .formtitle {
+  text-align: center;
+  font-family: convergence;
+  font-weight: 800;
+  background-color: transparent;
+  width: fit-content;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+form div {
+  background-color: rgba(50, 83, 101, 0.3843137255);
+  border-radius: 20px;
+  padding: 20px;
+  margin: 1rem 0px;
+  display: flex;
+}
+form div label {
+  width: 20%;
+  min-width: 150xp;
+}
+form div input {
+  width: 80%;
+  border-radius: 10px;
+  background-color: rgba(23, 41, 50, 0.3843137255);
+  padding: 4px 8px;
+}
+form div textarea {
+  width: 80%;
+  height: 200px;
+  border-radius: 10px;
+  background-color: rgba(23, 41, 50, 0.3843137255);
+  padding: 4px 8px;
+}
+form .send-msg {
+  justify-content: center;
+  gap: 3rem;
+}
+form .send-msg button {
+  border-radius: 10px;
+  padding: 4px 8px;
+  background-color: rgba(23, 41, 50, 0.3843137255);
+  font-size: 1.5rem;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./src/styles/css/style.css">
+  <link rel="stylesheet" href="./libraries/fontawesome-free-6.4.0-web/css/all.css"/>
+  <link rel="stylesheet" href="./src/styles/tcss/tailwind.css">
+  <title>Portfolio</title>
+  <script src="/libraries/code.jquery.com_jquery-3.7.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('#header').load('/src/components/header.html');
+      $('#footer').load('/src/components/footer.html');
+      $('#welcom').load('/src/components/welcom.html');
+      $('#languages').load('/src/components/languages.html');
+      $('#frameworks').load('/src/components/frameworks.html');
+      $('#skills').load('/src/components/skills.html');
+      $('#achivements').load('/src/components/achivements.html');
+      $('#projects').load('/src/components/projects.html');
+      $('#contact').load('/src/components/contact.html');
+      $('#social').load('/src/components/social.html');
+    })
+  </script>
+</head>
+<body>
+  <div class="flex backdrop-blur-lg">
+    <!-- header -->
+    <div id="header" class=" fixed"></div>
+    <!-- header end -->
+
+    <!-- body -->
+    <div id="main" class="flex flex-col">
+      <!-- welcom -->
+      <div id="welcom" class="mycontainer"></div>
+      <!-- welcom end -->
+
+      <!-- languages -->
+      <div id="languages" class="mycontainer"></div>
+      <!-- languages end-->
+
+      <!-- frameworks -->
+      <div id="frameworks" class="mycontainer"></div>
+      <!-- frameworks end-->
+
+      <!-- skills -->
+      <div id="skills" class="mycontainer"></div>
+      <!-- skills end-->
+
+      <!-- achivements -->
+      <div id="achivements" class="mycontainer"></div>
+      <!-- achivements end-->
+
+      <!-- projects -->
+      <div id="projects" class="mycontainer"></div>
+      <!-- projects end-->
+
+      <!-- contact -->
+      <div id="contact" class="mycontainer"></div>
+      <!-- contact end-->
+
+      <!-- social -->
+      <div id="social" class="mycontainer"></div>
+      <!-- social end-->
+      
+      <!-- footer -->
+      <div id="footer"></div>
+      <!-- footer end -->
+    </div>
+    <!-- body end -->
+    <div class=" fixed right-0">
+      <div class="circle-small sticky top-3">
+        <div class="text">8563<br/><span class="small">steps</span></div>
+        <svg>
+          <circle class="bg" cx="40" cy="40" r="37"></circle>
+          <circle class="progress one" cx="40" cy="40" r="37"></circle>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

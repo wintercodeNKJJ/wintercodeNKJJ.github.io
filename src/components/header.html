@@ -1,0 +1,57 @@
+<script>
+  $("ul li").on('click',function(){
+    $(this).addClass('active').siblings().removeClass('active');
+  })
+</script>
+<nav class="flex flex-col m-2 border-r-2 w-[250px] h-screen sticky top-0">
+  <!-- logo -->
+  <div class="flex justify-center mt-4 items-center"><img src="/assets/img/profile.jpg" alt="profile picture" id="logo"></div>
+  
+  <!-- links -->
+  <div id="links">
+    <ul class="flex flex-col flex-wrap justify-center">
+      <li class="active"><a href="#welcom"><i class="fas fa-user-circle"></i><p>Welcom</p></a></li>
+      <li><a href="#languages"><i class="fas fa-code"></i><p>Languages</p></a></li>
+      <li><a href="#frameworks"><i class="fas fa-wrench"></i><p>Framework</p></a></li>
+      <li><a href="#skills"><i class="fas fa-book"></i><p>Skills</p></a></li>
+      <li><a href="#achivements"><i class="fas fa-graduation-cap"></i><p>Achivements</p></a></li>
+      <li><a href="#projects"><i class="fas fa-cubes"></i><p>Projects</p></a></li>
+      <!-- <li><a href="#goles"><i class="fas fa-line-chart"></i><p>Objectives</p></a></li> -->
+      <li><a href="#contact"><i class="fas fa-phone"></i><p>Contact</p></a></li>
+      <li><a href="#social"><i class="fas fa-users"></i><p>Social Network</p></a></li>
+    </ul>
+  </div>
+
+  <div class="divider"></div>
+  
+  <!-- color -->
+  <div id="options" class="flex flex-col">
+    <ul>
+      <!-- colors -->
+      <li id="themes">
+        <i class="fas fa-paint-brush"></i><p>Themes</p>
+        <ul class="border hidden">
+          <li><p>light</p></li>
+          <li><p>dark</p></li>
+          <li><p>bumble bee</p></li>
+          <li><p>luxry</p></li>
+        </ul>
+      </li>
+      <!-- language -->
+      <li id="lang">
+        <i class="fas fa-language"></i><p>Language</p>
+        <ul class="border hidden">
+          <li><p>English</p></li>
+          <li><p>French</p></li>
+          <li><p>German</p></li>
+        </ul>
+      </li>
+    </ul>
+    <div id="resume" class="flex">
+      <div>
+        <p>My Resume</p>
+        <i class="fas fa-download"></i>
+      </div>
+    </div>
+  </div>
+</nav>
